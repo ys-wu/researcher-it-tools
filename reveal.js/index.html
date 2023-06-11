@@ -195,6 +195,34 @@
                         <h3>Programming Languages</h3>
                         <h4>Fortran, Matlab, JavaScript, Python, Julia, SPSS, SAS, R, LabVIEW, SQL, ...</h4>
                     </section>
+
+                    <section>
+                        <h3>Backend Example</h3>
+                        <pre data-id="code-animation">
+                            <code class="bash" data-trim data-line-numbers>
+                                # Bash
+                                pip install fastapi uvicorn
+                            </code>
+                        </pre>
+                        <pre data-id="code-animation">
+                            <code class="python" data-trim data-line-numbers>
+                                # Python
+                                from fastapi import FastAPI
+
+                                app = FastAPI()
+
+                                @app.get("/")
+                                def read_root():
+                                    return {"Hello": "World"}
+                            </code>
+                        </pre>
+                        <pre data-id="code-animation">
+                            <code class="bash" data-trim data-line-numbers>
+                                # Bash
+                                uvicorn main:app --reload
+                            </code>
+                        </pre>
+                    </section>
                 </section>
 			</div>
 		</div>
