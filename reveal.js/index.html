@@ -294,7 +294,32 @@
                                 pip freeze > requirements.txt
                                 echo "/venv/" > .gitignore
                             </code>
-                        </pre> 
+                        </pre>
+                    </section>
+
+                    <section>
+                        <h3>Docker</h3>
+                        <pre data-id="code-animation">
+                            <code class="docker" data-trim data-line-numbers>
+                                # Dockerfile
+                                FROM python:3.8-slim-buster
+
+                                WORKDIR /app
+
+                                COPY . /app
+
+                                RUN pip install --no-cache-dir -r requirements.txt
+
+                                CMD ["python", "app.py"]
+                            </code>
+                        </pre>
+                        <pre data-id="code-animation">
+                            <code class="bash" data-trim data-line-numbers>
+                                # Bash
+                                docker build -t my-python-app .
+                                docker run -v ./app.py:/app/app.py my-python-app
+                            </code>
+                        </pre>
                     </section>
                 </section>
 			</div>
