@@ -140,6 +140,56 @@
                             <h4>Backend</h4>
                             <p>Also referred to as server-side programming, is the part of the application that users don't see.</p>
                     </section>
+
+                    <section>
+                        <h3>Frontend: HTML, CSS, JS</h3>
+                        <h4>HTML: HyperText Markup Language</h4>
+                        <p>The standard markup language used to create the structure of web pages.</p>
+                        <h4>CSS: Cascading Style Sheets</h4>
+                        <p>A style-sheet language used for describing the look and formatting of a HTML document.</p>
+                        <h4>JS: JavaScript</h4>
+                        <p>A high-level, interpreted programming language used to enhance web pages with interactive features.</p>
+                    </section>
+
+                    <section>
+                        <pre data-id="code-animation">
+                            <code class="html" data-trim data-line-numbers>
+                                <!DOCTYPE html>
+                                <html>
+                                <head>
+                                    <title>My First Webpage</title>
+                                    <style>
+                                        body {
+                                            font-family: Arial, sans-serif;
+                                            background-color: #f0f0f0;
+                                            padding: 20px;
+                                        }
+                                
+                                        .colorText {
+                                            color: blue;
+                                        }
+                                    </style>
+                                </head>
+                                <body>
+                                    <h1 id="myText" class="colorText">Hello, World!</h1>
+                                    <button id="colorButton">Change color</button>
+                                
+                                    <script>
+                                        document.getElementById("colorButton").addEventListener("click", function() {
+                                            var myText = document.getElementById("myText");
+                                
+                                            if (myText.style.color === "blue") {
+                                                myText.style.color = "red";
+                                            } else {
+                                                myText.style.color = "blue";
+                                            }
+                                        });
+                                    </script>
+                                </body>
+                                </html>
+                            </code>
+                        </pre>
+                    </section>
                 </section>
 			</div>
 		</div>
