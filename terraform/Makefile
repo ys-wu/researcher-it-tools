@@ -5,7 +5,7 @@ DOCKER_IMAGE := hashicorp/terraform:light
 export AWS_ACCESS_KEY_ID
 export AWS_SECRET_ACCESS_KEY
 
-.PHONY: init plan apply destroy console
+.PHONY: init plan apply destroy console recreate taint-index-file force-upgrade-index-file
 
 init:
 	docker run -it --rm \
@@ -47,3 +47,13 @@ console:
 		$(DOCKER_IMAGE) console
 
 recreate: destroy apply
+
+taint-index-file:
+	docker run -it --rm \
+		-v $(PWD):/app/ \
+		-w /app/ \
+		--env AWS_ACCESS_KEY_ID \
+		--env AWS_SECRET_ACCESS_KEY \
+		$(DOCKER_IMAGE) taint aws_s3_object.index
+
+force-upgrade-index-file: taint-index-file apply
