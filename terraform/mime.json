@@ -1,0 +1,10 @@
+{
+  ".html": "text/html",
+  ".css": "text/css",
+  ".js": "application/javascript",
+  ".js.map": "application/javascript",
+  ".eot": "application/vnd.ms-fontobject",
+  ".woff": "application/font-woff",
+  ".ttf": "application/x-font-ttf",
+  "": "text/plain"
+}
